@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/pynca)](https://pypi.org/project/pynca/)
 [![PyPI Version](https://img.shields.io/pypi/v/pynca)](https://pypi.org/project/pynca/)
 [![License](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Tests](https://github.com/pyNCA/pynca/actions/workflows/ci.yml/badge.svg)](https://github.com/pyNCA/pynca/actions/workflows/ci.yml)
+[![Tests](https://github.com/husain-clintel/pyNCA/actions/workflows/ci.yml/badge.svg)](https://github.com/husain-clintel/pyNCA/actions/workflows/ci.yml)
 [![Documentation](https://readthedocs.org/projects/pynca/badge/?version=latest)](https://pynca.readthedocs.io/en/latest/?badge=latest)
 
 A Python package for Pharmacokinetic Non-Compartmental Analysis (NCA).
@@ -144,7 +144,7 @@ If you use pyNCA in your research, please cite:
 
 ```
 pyNCA: Python Non-Compartmental Analysis Package
-https://github.com/pyNCA/pynca
+https://github.com/husain-clintel/pyNCA
 ```
 
 ## Acknowledgments
