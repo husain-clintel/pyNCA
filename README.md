@@ -1,7 +1,7 @@
 # pyNCA
 
-[![Python Version](https://img.shields.io/pypi/pyversions/pynca)](https://pypi.org/project/pynca/)
-[![PyPI Version](https://img.shields.io/pypi/v/pynca)](https://pypi.org/project/pynca/)
+[![Python Version](https://img.shields.io/pypi/pyversions/nca-tools)](https://pypi.org/project/nca-tools/)
+[![PyPI Version](https://img.shields.io/pypi/v/nca-tools)](https://pypi.org/project/nca-tools/)
 [![License](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Tests](https://github.com/husain-clintel/pyNCA/actions/workflows/ci.yml/badge.svg)](https://github.com/husain-clintel/pyNCA/actions/workflows/ci.yml)
 [![Documentation](https://readthedocs.org/projects/pynca/badge/?version=latest)](https://pynca.readthedocs.io/en/latest/?badge=latest)
@@ -39,17 +39,22 @@ pyNCA is a Python implementation inspired by the [PKNCA R package](https://githu
 
 ```bash
 # Basic installation
-pip install pynca
+pip install nca-tools
 
 # With plotting support
-pip install pynca[plot]
+pip install nca-tools[plot]
 
 # With all optional dependencies
-pip install pynca[all]
+pip install nca-tools[all]
 
 # Development installation
-pip install pynca[dev]
+pip install nca-tools[dev]
 ```
+
+> **Note:** The package is installed as `nca-tools` but imported as `pynca`:
+> ```python
+> import pynca as nca
+> ```
 
 ### Docker
 
