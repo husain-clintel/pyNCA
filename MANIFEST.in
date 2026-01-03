@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+include CLAUDE.md
+recursive-include pynca *.py
+recursive-include tests *.py *.csv
+recursive-include docs *.rst *.py Makefile
+prune docs/_build
+prune .github

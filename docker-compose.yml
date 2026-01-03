@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  pynca:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pynca
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python -c "import pynca; print(f'pyNCA v{pynca.__version__} ready')"
+
+  # Jupyter notebook service for interactive analysis
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pynca-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./notebooks:/app/notebooks
+      - ./output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      bash -c "pip install --no-cache-dir jupyter jupyterlab &&
+               jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+               --NotebookApp.token='' --NotebookApp.password=''"
+
+  # Test service
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pynca-test
+    volumes:
+      - ./tests:/app/tests
+    command: >
+      bash -c "pip install --no-cache-dir pytest pytest-cov &&
+               pytest tests/ -v --cov=pynca"
