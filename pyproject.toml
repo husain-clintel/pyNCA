@@ -15,7 +15,6 @@ keywords = ["pharmacokinetics", "NCA", "non-compartmental analysis", "PK", "PKNC
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU Affero General Public License v3",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
